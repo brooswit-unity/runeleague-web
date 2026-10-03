@@ -6,7 +6,17 @@
     <title>Unity Web Player | runeleague</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
+  <style id="runeleague-changelog-style">
+#runeleague-changelog { position: fixed; bottom: 0; left: 0; right: 0;
+  height: 32px; box-sizing: border-box; padding: 6px 12px; text-align: right;
+  background: #191919; color: #ddd; font: 14px/20px system-ui, sans-serif; }
+#runeleague-changelog a { color: #bde0ff; }
+#unity-container.unity-desktop { top: calc(50% - 16px); max-width: 100%; }
+#unity-container.unity-desktop #unity-canvas { max-width: 100vw;
+  max-height: calc(100vh - 80px); max-height: calc(100dvh - 80px); }
+#unity-container.unity-mobile { height: calc(100% - 32px); }
+</style>
+</head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
@@ -61,7 +71,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "runeleague",
-        productVersion: "v0.0.38",
+        productVersion: "v0.0.39",
         showBanner: unityShowBanner,
       };
 
@@ -123,5 +133,7 @@
       document.body.appendChild(script);
 
     </script>
-  </body>
+  <nav id="runeleague-changelog" aria-label="Release history">
+<a href="changelog.html" target="_blank" rel="noopener">Changelog</a></nav>
+</body>
 </html>
